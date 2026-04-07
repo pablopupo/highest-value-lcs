@@ -20,6 +20,9 @@ highest-value-lcs/
     data/
         example.in  (worked example from the assignment PDF)
         example.out (expected output for example.in)
+        test1.in ... test10.in   (10 randomly generated test inputs)
+    testing/
+        generator.py   (random input file generator)
 ```
 
 ## Build and Run
@@ -41,7 +44,16 @@ one optimal subsequence, and writes the same thing to
 cb
 ```
 
-If you leave off the filename it defaults to `example.in`.
+If you leave off the filename it defaults to `example.in`. The repo
+also ships 10 randomly generated test files (`data/test1.in` through
+`data/test10.in`, string lengths 25 to 600) which can be run the same
+way, e.g. `python src/main.py test5.in`.
+
+To generate your own random input file:
+
+```
+python testing/generator.py <n> <filename>
+```
 
 ## Input format
 
